@@ -11,12 +11,12 @@ This data pipeline can be broken down in the following steps:
 3. The created `.csv` file is then placed into Cloud Storage.
 4. Using BigQuery, the `.csv` file is uploaded as a table with data where SQL queries can be ran. 
 
-::: mermaid
+```mermaid
 flowchart LR;
     A(Python Script)-->B(IEX Cloud API) & C(Create .csv file);
     C-->D(Cloud Storage);
     D-->E(BigQuery);
-:::
+```
 
 ## Tools used
 
