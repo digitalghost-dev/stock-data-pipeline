@@ -22,6 +22,7 @@ flowchart LR;
     C-->D(Cloud Storage);
     D-->E(bq_update.py);
     E-->F(BigQuery);
+    style F fill:#AACC00,color:#000
 ```
 
 ## Services used
