@@ -1,6 +1,7 @@
 from urllib.request import urlopen
-from config import api_key
+from config import api_key, uri
 import pandas as pd
+import subprocess
 import requests
 import json
 import time
@@ -56,3 +57,5 @@ if __name__ == "__main__":
     company_info()
 
 print("Code ran for:", time.time() - start_time, "seconds.")
+
+subprocess.run(["gsutil cp *.csv " + url], shell=True)
