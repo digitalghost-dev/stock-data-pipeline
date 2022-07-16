@@ -58,4 +58,4 @@ if __name__ == "__main__":
 
 print("Code ran for:", time.time() - start_time, "seconds.")
 
-subprocess.run(["gsutil cp *.csv " + url], shell=True)
+subprocess.run(["gsutil cp *.csv " + uri], shell=True)
