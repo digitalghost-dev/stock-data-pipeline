@@ -40,7 +40,7 @@ def company_info():
     while count < len(sorted_list):
         ticker = sorted_list[count]
 
-        with urlopen(url + ticker + url_2 + key) as response:
+        with urlopen("{}{}{}{}".format(url, ticker, url_2, key)) as response:
             source = response.read()
             data = json.loads(source)
 
