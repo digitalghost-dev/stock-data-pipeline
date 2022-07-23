@@ -1,46 +1,28 @@
 from urllib.request import urlopen
 from config import api_key, uri
+from list import ticker_list
 from bq_update import *
 import pandas as pd
 import subprocess
-import requests
 import json
 import time
-
-# Pretend to be a browser.
-headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.75 Safari/537.36", "X-Requested-With": "XMLHttpRequest"}
 
 # Starting the program run timer.
 start_time = time.time()
 
-url_wiki = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
-
-req = requests.get(url_wiki, headers = headers)
-table = pd.read_html(req.text, attrs = {'id':'constituents'})
-
-# Getting the symbol column from the Wikipedia table.
-first_col = table[0]['Symbol']
-
-# Putting the scraped ticker symbols in a list.
-companies = []
-for ticker in first_col:
-    companies.append(ticker.lower())
-
-sorted_list = sorted(companies)
-
-url = 'https://cloud.iexapis.com/stable/stock/'
-url_2 = '/quote/?token='
-key = api_key
+base_url = 'https://cloud.iexapis.com/stable/stock/'
+quote_url = '/quote/?token='
+company_url = '/company?token='
 
 def company_info():
     header_list = ['Ticker', 'Company', 'Price', 'PercentChange']
 
-    list_of_companies = []
+    master_list = []
     count = 0
-    while count < len(sorted_list):
-        ticker = sorted_list[count]
+    while count < len(ticker_list):
+        ticker = ticker_list[count]
 
-        with urlopen("{}{}{}{}".format(url, ticker, url_2, key)) as response:
+        with urlopen("{}{}{}{}".format(base_url, ticker, quote_url, api_key)) as response:
             source = response.read()
             data = json.loads(source)
 
@@ -51,13 +33,14 @@ def company_info():
         change = data["change"]
     
         info = [symbol, company, price, change]
-        list_of_companies.append(info)
+        master_list.append(info)
         count += 1
         
-        # Removing commas in in company names, outputting a CSV file.
-        dataframe = pd.DataFrame(list_of_companies)
+        # Removing commas in company names, outputting a CSV file.
+        dataframe = pd.DataFrame(master_list)
         dataframe = dataframe.replace(",", "", regex=True)
         dataframe.to_csv('output.csv', header=header_list, index=False)
+
 
 if __name__ == "__main__":
     company_info()
