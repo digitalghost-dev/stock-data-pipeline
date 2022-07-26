@@ -1,3 +1,5 @@
+#!usr/bin/env python
+
 # Importing needed modules.
 from urllib.request import urlopen
 from config import api_key, uri
