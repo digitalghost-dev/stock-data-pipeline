@@ -1,3 +1,6 @@
+bq_conn_create_json.py
+__pycache__
+bq_conn.py
+data.json
 config.py
 list.py
-__pycache__
