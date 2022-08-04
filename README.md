@@ -16,7 +16,7 @@ This data pipeline can be broken down in the following steps:
     3. Copies the `.csv` file to Cloud Storage.
     4. Uploads the `.csv` file to BigQuery.
     5. A CRON job that is configured in the virtual machine runs `main.py` every 15 minutes, 9:00 - 16:00 EST, Monday through Friday.
-2. Using the [BigQuery API](https://cloud.google.com/bigquery/docs/quickstarts/quickstart-client-libraries), the data is queried and then displayed on my [website](https://digitalghost.dev/projects/data-pipeline).
+2. Using the [BigQuery API](https://cloud.google.com/bigquery/docs/quickstarts/quickstart-client-libraries), the data is queried and then displayed on my [website](https://www.digitalghost.dev/projects/data-pipeline).
     * *Note:* The file that connects to BigQuery to run the SQL query is located in my [Flask application folder](https://github.com/digitalghost-dev/website) for my website in the `bq_conn.py` file.
 
 ```mermaid
