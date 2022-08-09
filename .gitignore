@@ -4,3 +4,4 @@ bq_conn.py
 data.json
 config.py
 list.py
+.DS_Store
