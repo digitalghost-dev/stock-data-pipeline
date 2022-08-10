@@ -1,7 +1,9 @@
 # Data Pipeline with Python and Google Cloud
 
-<img alt="Version" src="https://img.shields.io/badge/Current Version-1.0-blue.svg?cacheSeconds=2592000" />
-<img alt="Version" src="https://img.shields.io/badge/Project Number-1-orange.svg?cacheSeconds=2592000" />
+<div align="center">
+    <img alt="Version" src="https://img.shields.io/badge/Current Version-1.0-blue.svg?cacheSeconds=2592000" />
+    <img alt="Version" src="https://img.shields.io/badge/Project Number-1-orange.svg?cacheSeconds=2592000" />
+</div>
 
 ## Background
 > This is my first project and attempt at creating a data pipeline. It's a simple example, but it helps to understand how data can flow from one place to another. In this case, an API through cloud services then to my website.
