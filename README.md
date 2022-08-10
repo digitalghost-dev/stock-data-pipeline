@@ -49,7 +49,6 @@ flowchart LR;
 
 ## Services used
 
-* Python
 * [IEX Cloud](https://www.iexcloud.io) for financial data.
 * Google Cloud services:
     * [Compute Engine Virtual Machine](https://cloud.google.com/compute)
