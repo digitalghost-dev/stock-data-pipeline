@@ -19,7 +19,9 @@ quote_url = '/quote/?token='
 company_url = '/company?token='
 
 def company_info():
-    header_list = ['Ticker', 'Company', 'Price', 'PercentChange']
+    header_list = ['ticker', 'company', 'price', 'change', 'peRatio']
+    sep = " -"
+    sep2 = " ("
 
     # Iterating through all of the tickers to get the data.
     master_list = []
@@ -35,14 +37,17 @@ def company_info():
         # API endpoints used.
         symbol = data["symbol"]
         company = data["companyName"]
+        company_stripped = company.split(sep, 1)[0]
+        company_stripped = company_stripped.split(sep2, 1)[0]
         price = data["latestPrice"]
         change = data["change"]
+        peRatio = data["peRatio"]
     
         # Appending the end point data to the master list.
-        info = [symbol, company, price, change]
+        info = [symbol, company_stripped, price, change, peRatio]
         master_list.append(info)
         count += 1
-        
+
         # Removing commas in company names, outputting a CSV file.
         dataframe = pd.DataFrame(master_list)
         dataframe = dataframe.replace(",", "", regex=True)
