@@ -26,7 +26,7 @@ This data pipeline follows an ETL process and can be broken down in the followin
 
 1. Within a Compute Engine virtual machine, `main.py` runs and does the following:
     1. Reaches out to IEX Cloud API.
-    2. The data is cleaned by removing commas if contained in a company name.
+    2. The data is cleaned by removing commas, hyphens, or other extra characters from the **company name** column.
     3. Creates a `.csv` file with stock data from the API.
     4. Copies the `.csv` file to Cloud Storage.
     5. Uploads the `.csv` file to BigQuery. 
@@ -59,6 +59,9 @@ flowchart LR;
 
 ### Version 1.0
 
-* Set up the initial files and infastructure, *as shown in [How the Pipeline Works](#how-the-pipeline-works),* to have the data shown on the frontend.
-* The four statistics shown are the **ticker symbol**, **company name**, **current price**, and **percent change**.
-* Analyzing how many credits are used in a month from the API to determine next version's new metrics and update cycle frequency.
+* Set up the initial files and infastructure.
+* The four metrics shown are the **ticker symbol**, **company name**, **current price**, and **percent change**.
+
+#### Version 1.1
+
+* Adding the P/E Ratio as a new metric.
