@@ -1,6 +1,6 @@
 # Stock Data Pipeline with Python and Google Cloud
 
-<div align="center">
+<div>
     <img alt="Version" src="https://img.shields.io/badge/Current Version-1.1-blue.svg?cacheSeconds=2592000" />
     <img alt="Version" src="https://img.shields.io/badge/Project Number-1-orange.svg?cacheSeconds=2592000" />
 </div>
