@@ -50,7 +50,7 @@ flowchart LR;
 ## Services used
 
 * **API:** [IEX Cloud](https://www.iexcloud.io)
-* Google Cloud services:
+* **Google Cloud services**
     * **Virtual Machine:** [Compute Engine ](https://cloud.google.com/compute)
     * **Object Storage:** [Cloud Storage](https://cloud.google.com/storage)
     * **Data Warehouse:** [BigQuery](https://cloud.google.com/bigquery/)
