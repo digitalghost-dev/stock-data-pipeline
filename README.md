@@ -49,11 +49,11 @@ flowchart LR;
 
 ## Services used
 
-* [IEX Cloud](https://www.iexcloud.io) for financial data.
+* **API:** [IEX Cloud](https://www.iexcloud.io)
 * Google Cloud services:
-    * [Compute Engine Virtual Machine](https://cloud.google.com/compute)
-    * [Cloud Storage](https://cloud.google.com/storage)
-    * [BigQuery](https://cloud.google.com/bigquery/)
+    * **Virtual Machine:** [Compute Engine ](https://cloud.google.com/compute)
+    * **Object Storage:** [Cloud Storage](https://cloud.google.com/storage)
+    * **Data Warehouse:** [BigQuery](https://cloud.google.com/bigquery/)
 
 ## Changlog
 
