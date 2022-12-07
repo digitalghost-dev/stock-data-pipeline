@@ -35,17 +35,8 @@ This data pipeline follows an ETL process and can be broken down in the followin
 2. Using the [BigQuery API](https://cloud.google.com/bigquery/docs/quickstarts/quickstart-client-libraries) and when the [webpage](https://www.digitalghost.dev/projects/data-pipeline) is loaded, the data is queried and then displayed.
     * *Note:* The file that connects to BigQuery to pull the data when the page loads is located in my [wesbite repository](https://github.com/digitalghost-dev/website/) since that renders the frontend.
 
-```mermaid
-flowchart LR;
-    subgraph Compute Engine VM;
-    A(main.py)-->B(IEX Cloud API) & C(Create .csv file);
-    end;
-    B-->C;
-    C-->D(Cloud Storage);
-    D-->E(BigQuery);
-    E-->F(Website Page);
-    style F fill:#AACC00,color:#000
-```
+### Pipeline Flowchart
+![flowchart](https://storage.googleapis.com/personal-website-nv-bucket/StockData-Flowchart.png)
 
 ## Services used
 
