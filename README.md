@@ -15,6 +15,7 @@ This pipeline provides basic stock information from all the companies in the [S&
 * Company Name
 * Current Price
 * Percent Change
+* P/E Ratio
 
 I plan to expand the data shown in future versions.
 
