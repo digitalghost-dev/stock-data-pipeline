@@ -30,4 +30,4 @@ def bigqueryupload():
     load_job.result()  
 
     destination_table = client.get_table(table_id)
-    print("Loaded {} rows.".format(destination_table.num_rows))
+    print(f"Loaded {destination_table.num_rows} rows.")
