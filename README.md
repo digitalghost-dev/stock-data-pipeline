@@ -35,7 +35,7 @@ This data pipeline follows an ETL process and can be broken down in the followin
     * *Note:* The file that connects to BigQuery to pull the data when the page loads is located in my [wesbite repository](https://github.com/digitalghost-dev/website/) since that renders the frontend.
 
 ### Pipeline Flowchart
-![stock-data-flowchart](https://storage.googleapis.com/personal-website-nv-bucket/stock-data-flowchart.png)
+![stock-data-flowchart](https://storage.googleapis.com/personal-website-nv-bucket/stock-data-project-flowchart.png)
 
 ## Services used
 
