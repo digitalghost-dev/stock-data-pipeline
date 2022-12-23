@@ -25,7 +25,7 @@ def company_info():
         ticker = ticker_list[count]
 
         # Opening and reading the API endpoints.
-        with urlopen("{}{}{}{}".format(base_url, ticker, quote_url, api_key)) as response:
+        with urlopen(f"{base_url}{ticker}{quote_url}{api_key}") as response:
             source = response.read()
             data = json.loads(source)
 
