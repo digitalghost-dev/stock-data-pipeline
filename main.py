@@ -1,17 +1,12 @@
 #!usr/bin/env python
 
 # Importing needed modules.
+from load import csv_file, bigqueryupload
 from urllib.request import urlopen
-from config import api_key, uri
 from list import ticker_list
-from bq_update import *
+from config import api_key
 import pandas as pd
-import subprocess
 import json
-import time
-
-# Starting the program run timer.
-start_time = time.time()
 
 # URLs needed to build the API endpoint connection.
 base_url = 'https://cloud.iexapis.com/stable/stock/'
@@ -55,12 +50,6 @@ def company_info():
 
 if __name__ == "__main__":
     company_info()
-
-# Printing out how long it took the file to run.
-print("Code ran for:", time.time() - start_time, "seconds.")
-
-# Running a shell command to upload to Cloud Storage.
-subprocess.run(["gsutil cp *.csv " + uri], shell=True)
-
-# Running the function from bq_update file.
-bigqueryupload()
+    # Running the functions from load.py file.
+    csv_file()
+    bigqueryupload()

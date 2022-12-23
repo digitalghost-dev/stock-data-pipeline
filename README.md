@@ -17,28 +17,29 @@ This pipeline provides basic information from all the companies in the [S&P500](
 * Percent Change
 * P/E Ratio
 
-[View the frontend](https://www.digitalghost.dev/projects/stock-data-pipeline) of the data.
+[View the data.](https://www.digitalghost.dev/projects/stock-data-pipeline)
 
 ## How the Pipeline Works
 
 This data pipeline follows an ETL process and can be broken down in the following steps:
 
-1. Within a Compute Engine virtual machine, `main.py` runs and does the following:
-    1. Calls the IEX Cloud API.
-    2. The data is cleaned by removing commas, hyphens, and/or other extra characters from the **company name** column.
-    3. Creates a `csv` file with the cleaned data.
-    4. Copies the `csv` file to a Cloud Storage bucket.
-    5. Uploads the `csv` file to BigQuery. 
-        * *Note:* `bq_update.py` holds the code for uploading to BigQuery but is called from within `main.py` to keep files more organized.
-    6. A CRON job in the virtual machine runs `main.py` every 15 minutes, 9:00 - 16:00 EST, Monday through Friday with updated data.
-2. Using the [BigQuery API](https://cloud.google.com/bigquery/docs/quickstarts/quickstart-client-libraries) and when the [webpage](https://www.digitalghost.dev/projects/data-pipeline) is loaded, the data is queried and then displayed.
-    * *Note:* The file that connects to BigQuery to pull the data when the page loads is located in my [wesbite repository](https://github.com/digitalghost-dev/website/) since that renders the frontend.
+1. Within a Compute Engine virtual machine: 
+    1. A cron job triggers `main.py` to run.
+    2. `main.py` calls the IEX Cloud API.
+    3. The data is processed and cleaned by removing commas, hyphens, and/or other extra characters from the **company name** column.
+    4. `main.py` creates a `csv` file with the prepared data.
+    5. `load.py` copies the `csv` file to a Cloud Storage bucket.
+    6. The `csv` file is loaded to BigQuery.
+2. Using the [BigQuery API](https://cloud.google.com/bigquery/docs/quickstarts/quickstart-client-libraries) and when the [webpage](https://www.digitalghost.dev/projects/stock-data-pipeline) is loaded, the data is queried and then displayed.
+    * **Note:** The file that connects to BigQuery to pull the data when the page loads is located in my [wesbite repository](https://github.com/digitalghost-dev/website/) since that renders the frontend.
+    * **Note:** The pipeline does not account for holidays.
 
 ### Pipeline Flowchart
-![stock-data-flowchart](https://storage.googleapis.com/personal-website-nv-bucket/stock-data-pipeline-flowchart.png)
+![stock-data-flowchart](https://storage.googleapis.com/personal-website-nv-bucket/stock-data-pipeline-chart.png)
 
 ## Services used
 
+* **Scheduler:** [cron](https://en.wikipedia.org/wiki/Cron)
 * **API:** [IEX Cloud](https://www.iexcloud.io)
 * **Google Cloud services**
     * **Virtual Machine:** [Compute Engine ](https://cloud.google.com/compute)
