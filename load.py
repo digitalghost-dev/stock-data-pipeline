@@ -22,7 +22,7 @@ def bigqueryupload():
             bigquery.SchemaField("Ticker", "STRING"),
             bigquery.SchemaField("Company", "STRING"),
             bigquery.SchemaField("Price", "FLOAT"),
-            bigquery.SchemaField("PercentChange", "FLOAT"),
+            bigquery.SchemaField("Change", "FLOAT"),
             bigquery.SchemaField("PE_Ratio", "FLOAT")
         ],
     )
