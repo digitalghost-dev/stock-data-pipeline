@@ -1,7 +1,7 @@
 #!usr/bin/env python
 
 # Importing needed modules.
-from load import csv_file, bigqueryupload
+from load import csv_file, bigquery_upload
 from urllib.request import urlopen
 from list import ticker_list
 from config import api_key
@@ -52,4 +52,4 @@ if __name__ == "__main__":
     company_info()
     # Running the functions from load.py file.
     csv_file()
-    bigqueryupload()
+    bigquery_upload()

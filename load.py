@@ -1,13 +1,13 @@
-from config import table_name, uri
+from config import table_name, cloud_storage_bucket
 from google.cloud import bigquery
 import subprocess
 
 def csv_file():
 
     # Running a shell command to upload to Cloud Storage.
-    subprocess.run(["gsutil cp *.csv " + uri], shell=True)
+    subprocess.run(["gsutil cp *.csv " + cloud_storage_bucket], shell=True)
 
-def bigqueryupload():
+def bigquery_upload():
 
     # Construct a BigQuery client object.
     client = bigquery.Client()
@@ -29,7 +29,7 @@ def bigqueryupload():
 
     # Make an API request.
     load_job = client.load_table_from_uri(
-        uri, table_id, job_config=job_config
+        cloud_storage_bucket, table_id, job_config=job_config
     )
 
     # Waits for the job to complete.
