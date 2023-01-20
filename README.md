@@ -35,7 +35,7 @@ This data pipeline follows an ETL process and can be broken down in the followin
     * **Note:** The pipeline does not account for holidays.
 
 ### Pipeline Flowchart
-![stock-data-flowchart](https://storage.googleapis.com/website-storage-bucket/stock-data-pipeline-flowchart.png)
+![stock-data-flowchart](https://storage.googleapis.com/pipeline-flowcharts/stock-data-pipeline-flowchart.png)
 
 ## Services used
 
