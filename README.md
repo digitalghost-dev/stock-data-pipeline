@@ -1,7 +1,6 @@
 # Stock Data Pipeline with Python and Google Cloud
 
 <div>
-    <img alt="Version" src="https://img.shields.io/badge/Current Version-1.1-blue.svg?cacheSeconds=2592000" />
     <img alt="Version" src="https://img.shields.io/badge/Project Number-1-orange.svg?cacheSeconds=2592000" />
 </div>
 
@@ -45,14 +44,3 @@ This data pipeline follows an ETL process and can be broken down in the followin
     * **Virtual Machine:** [Compute Engine ](https://cloud.google.com/compute)
     * **Object Storage:** [Cloud Storage](https://cloud.google.com/storage)
     * **Data Warehouse:** [BigQuery](https://cloud.google.com/bigquery/)
-
-## Changlog
-
-### Version 1.0
-
-* Set up the initial files and infastructure.
-* The four metrics shown are the **ticker symbol**, **company name**, **current price**, and **percent change**.
-
-#### Version 1.1
-
-* Adding the P/E Ratio as a new metric.
