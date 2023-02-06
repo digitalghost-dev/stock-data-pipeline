@@ -5,10 +5,6 @@
 </div>
 
 ## Description
-> This is my first project and attempt at creating a data pipeline. It's a simple example, but it helps to understand how data can flow from one place to another. In this case, an API through cloud services then to my website.
-
-> It being a simple data pipeline, no fancy data engineering tools are used. Only Python and a few Google Cloud services.
-
 This pipeline provides basic information from all the companies in the [S&P500](https://markets.businessinsider.com/index/components/s&p_500?op=1). The statistics shown for each company is:
 * Ticker Symbol
 * Company Name
