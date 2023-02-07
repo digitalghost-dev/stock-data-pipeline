@@ -15,7 +15,7 @@
 <br>
 
 ## Description
-This pipeline provides basic metrics from all the companies in the [S&P500](https://markets.businessinsider.com/index/components/s&p_500?op=1). The statistics shown for each company is:
+This pipeline provides basic metrics from all the companies in the [S&P500](https://markets.businessinsider.com/index/components/s&p_500?op=1). The metrics shown are:
 * Ticker Symbol
 * Company Name
 * Current Price
