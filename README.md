@@ -1,18 +1,28 @@
 # Stock Data Pipeline with Python and Google Cloud
 
+> <picture>
+>   <source media="(prefers-color-scheme: light)" srcset="https://storage.googleapis.com/website-storage-bucket/icons/warning.svg">
+>   <img alt="Tip" src="https://storage.googleapis.com/website-storage-bucket/icons/warning.svg">
+> </picture><br>
+> Any data in this project or on my website is for informational purposes only and should not be taken as invesment advice.
+
+<br>
+
 <div>
     <img alt="Version" src="https://img.shields.io/badge/Project Number-1-orange.svg?cacheSeconds=2592000" />
 </div>
 
+<br>
+
 ## Description
-This pipeline provides basic information from all the companies in the [S&P500](https://markets.businessinsider.com/index/components/s&p_500?op=1). The statistics shown for each company is:
+This pipeline provides basic metrics from all the companies in the [S&P500](https://markets.businessinsider.com/index/components/s&p_500?op=1). The statistics shown for each company is:
 * Ticker Symbol
 * Company Name
 * Current Price
 * Percent Change
 * P/E Ratio
 
-[View the data.](https://www.digitalghost.dev/projects/stock-data-pipeline)
+View the data on my [webpage](https://www.digitalghost.dev/projects/stock-data-pipeline).
 
 ## How the Pipeline Works
 
@@ -36,6 +46,7 @@ This data pipeline follows an ETL process and can be broken down in the followin
 
 * **Scheduler:** [cron](https://en.wikipedia.org/wiki/Cron)
 * **API:** [IEX Cloud](https://www.iexcloud.io)
+* **Visualization:** [Webpage](https://www.digitalghost.dev/projects/stock-data-pipeline)
 * **Google Cloud services**
     * **Virtual Machine:** [Compute Engine ](https://cloud.google.com/compute)
     * **Object Storage:** [Cloud Storage](https://cloud.google.com/storage)
