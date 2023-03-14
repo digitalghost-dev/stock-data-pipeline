@@ -22,7 +22,7 @@ This pipeline provides basic metrics from all the companies in the [S&P500](http
 * Percent Change
 * P/E Ratio
 
-View the data on my [webpage](https://www.digitalghost.dev/projects/stock-data-pipeline).
+View the data on my [webpage](https://www.digitalghost.dev/stock-data-pipeline).
 
 ## How the Pipeline Works
 
@@ -46,7 +46,7 @@ This data pipeline follows an ETL process and can be broken down in the followin
 
 * **Scheduler:** [cron](https://en.wikipedia.org/wiki/Cron)
 * **API:** [IEX Cloud](https://www.iexcloud.io)
-* **Visualization:** [Webpage](https://www.digitalghost.dev/projects/stock-data-pipeline)
+* **Visualization:** [Webpage](https://www.digitalghost.dev/stock-data-pipeline)
 * **Google Cloud services**
     * **Virtual Machine:** [Compute Engine ](https://cloud.google.com/compute)
     * **Object Storage:** [Cloud Storage](https://cloud.google.com/storage)
