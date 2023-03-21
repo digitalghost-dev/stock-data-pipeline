@@ -16,7 +16,7 @@
 
 ## Overview
 * Extracts and transforms S&P 500 stock data with Python from a financial API.
-* Data is loaded into BigQuery and rendered on my webpage.
+* Data is loaded into Cloud Storage then transferred to BigQuery and rendered on my webpage.
 * Python code runs on a scheduled cron job through a virtual machine with GCP Compute Engine.
 
 ### Important Links
