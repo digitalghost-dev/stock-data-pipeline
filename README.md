@@ -14,28 +14,27 @@
 
 <br>
 
-## Description
-This pipeline provides basic metrics from all the companies in the [S&P500](https://markets.businessinsider.com/index/components/s&p_500?op=1). The metrics shown are:
-* Ticker Symbol
-* Company Name
-* Current Price
-* Percent Change
-* P/E Ratio
+## Overview
+* Extracts and transforms S&P 500 stock data with Python from a financial API.
+* Data is loaded into BigQuery and rendered on my webpage.
+* Python code runs on a scheduled cron job through a virtual machine with GCP Compute Engine.
 
-View the data on my [webpage](https://www.digitalghost.dev/stock-data-pipeline).
+### Important Links
+* [Visualization](https://www.digitalghost.dev/stock-data-pipeline)
+* [Documentation](https://www.digitalghost.dev/docs/stock-data-pipeline)
 
 ## How the Pipeline Works
 
 This data pipeline follows an ETL process and can be broken down in the following steps:
 
-1. Within a Compute Engine virtual machine: 
+* Within a Compute Engine virtual machine: 
     1. A cron job triggers `main.py` to run.
     2. `main.py` calls the IEX Cloud API.
     3. The data is processed and cleaned by removing commas, hyphens, and/or other extra characters from the **company name** column.
     4. `main.py` creates a `csv` file with the prepared data.
     5. `load.py` copies the `csv` file to a Cloud Storage bucket.
     6. The `csv` file is loaded to BigQuery.
-2. Using the [BigQuery API](https://cloud.google.com/bigquery/docs/quickstarts/quickstart-client-libraries) and when the [webpage](https://www.digitalghost.dev/projects/stock-data-pipeline) is loaded, the data is queried and then displayed.
+* Using the [BigQuery API](https://cloud.google.com/bigquery/docs/quickstarts/quickstart-client-libraries) and when the [webpage](https://www.digitalghost.dev/projects/stock-data-pipeline) is loaded, the data is queried and then displayed.
     * **Note:** The file that connects to BigQuery to pull the data when the page loads is located in my [wesbite repository](https://github.com/digitalghost-dev/website/) since that renders the frontend.
     * **Note:** The pipeline does not account for holidays.
 
@@ -46,7 +45,7 @@ This data pipeline follows an ETL process and can be broken down in the followin
 
 * **Scheduler:** [cron](https://en.wikipedia.org/wiki/Cron)
 * **API:** [IEX Cloud](https://www.iexcloud.io)
-* **Visualization:** [Webpage](https://www.digitalghost.dev/stock-data-pipeline)
+* **Visualization:** [Flask](https://flask.palletsprojects.com/en/2.2.x/) and HTML
 * **Google Cloud services**
     * **Virtual Machine:** [Compute Engine ](https://cloud.google.com/compute)
     * **Object Storage:** [Cloud Storage](https://cloud.google.com/storage)
