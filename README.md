@@ -43,11 +43,10 @@
 ![stock-data-flowchart](https://storage.googleapis.com/pipeline-flowcharts/stock-data-pipeline-flowchart.png)
 
 ## Services used
-
-* **Scheduler:** [cron](https://en.wikipedia.org/wiki/Cron)
 * **API:** [IEX Cloud](https://www.iexcloud.io)
-* **Visualization:** [Flask](https://flask.palletsprojects.com/en/2.2.x/) and HTML
 * **Google Cloud Services:**
     * **Virtual Machine:** [Compute Engine ](https://cloud.google.com/compute)
     * **Object Storage:** [Cloud Storage](https://cloud.google.com/storage)
     * **Data Warehouse:** [BigQuery](https://cloud.google.com/bigquery/)
+* **Scheduler:** [cron](https://en.wikipedia.org/wiki/Cron)
+* **Visualization:** [Flask](https://flask.palletsprojects.com/en/2.2.x/) and HTML
