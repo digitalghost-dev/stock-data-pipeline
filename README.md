@@ -42,8 +42,8 @@
 ### Pipeline Flowchart
 ![stock-data-flowchart](https://storage.googleapis.com/pipeline-flowcharts/stock-data-pipeline-flowchart.png)
 
-## Services used
-* **API:** [IEX Cloud](https://www.iexcloud.io)
+## Services Used
+* **APIs:** [IEX Cloud](https://www.iexcloud.io)
 * **Google Cloud Services:**
     * **Virtual Machine:** [Compute Engine ](https://cloud.google.com/compute)
     * **Object Storage:** [Cloud Storage](https://cloud.google.com/storage)
