@@ -12,8 +12,6 @@
     <img alt="Version" src="https://img.shields.io/badge/Project Number-1-orange.svg?cacheSeconds=2592000" />
 </div>
 
-<br>
-
 ## Overview
 * Extracts and transforms S&P 500 stock data with Python from a financial API.
 * Data is loaded into Cloud Storage then transferred to BigQuery and rendered on my webpage.
