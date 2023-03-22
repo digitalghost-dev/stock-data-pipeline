@@ -21,7 +21,7 @@
 
 ### Important Links
 * [Visualization](https://www.digitalghost.dev/stock-data-pipeline)
-* [Documentation](https://www.digitalghost.dev/docs/stock-data-pipeline)
+* [Documentation](https://github.com/digitalghost-dev/stock-data-pipeline/wiki/Stock-Data-Pipeline-Documentation)
 
 ## How the Pipeline Works
 
