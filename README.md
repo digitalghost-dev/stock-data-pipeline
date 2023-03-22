@@ -25,9 +25,7 @@
 
 ## How the Pipeline Works
 
-This data pipeline follows an ETL process and can be broken down in the following steps:
-
-**Within a Compute Engine virtual machine:** 
+### Data Pipeline
 1. A cron job triggers `main.py` to run.
 2. `main.py` calls the IEX Cloud API.
 3. The data is processed and cleaned by removing commas, hyphens, and/or other extra characters from the **company name** column.
@@ -36,9 +34,12 @@ This data pipeline follows an ETL process and can be broken down in the followin
 6. The `csv` file is loaded to BigQuery.
 7. Using the [BigQuery API](https://cloud.google.com/bigquery/docs/quickstarts/quickstart-client-libraries) and when the [webpage](https://www.digitalghost.dev/projects/stock-data-pipeline) is loaded, the data is queried and then displayed.
 
-**Note:** The file that connects to BigQuery to pull the data when the page loads is located in my [wesbite repository](https://github.com/digitalghost-dev/website/) since that renders the frontend.
+### CI/CD
+* None
 
-**Note:** The pipeline does not account for holidays.
+### Notes:
+* The file that connects to BigQuery to pull the data when the page loads is located in my [wesbite repository](https://github.com/digitalghost-dev/website/) since that renders the frontend.
+* The pipeline does not account for holidays.
 
 ### Pipeline Flowchart
 ![stock-data-flowchart](https://storage.googleapis.com/pipeline-flowcharts/stock-data-pipeline-flowchart.png)
