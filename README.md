@@ -1,6 +1,13 @@
 # Stock Data Pipeline with Python and Google Cloud
 
 > <picture>
+>   <source media="(prefers-color-scheme: light)" srcset="https://storage.googleapis.com/website-storage-bucket/icons/danger.svg">
+>   <img alt="Tip" src="https://storage.googleapis.com/website-storage-bucket/icons/danger.svg">
+> </picture><br>
+> This project is now archived. The visualization still works but has stopped being updated as of March 30th, 2022. Archival was set due to no longer wanting to pay for API usage.
+
+
+> <picture>
 >   <source media="(prefers-color-scheme: light)" srcset="https://storage.googleapis.com/website-storage-bucket/icons/warning.svg">
 >   <img alt="Tip" src="https://storage.googleapis.com/website-storage-bucket/icons/warning.svg">
 > </picture><br>
